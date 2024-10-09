@@ -22,6 +22,8 @@ public class Student {
     private String phoneNumber;
     private String address;
 
+    public Student() {}
+
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Parent> parents;
 
