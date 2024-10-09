@@ -31,7 +31,7 @@ public class Student {
     private List<LessonReport> lessonReports;
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Asessment> assessments;
+    private List<Assessment> assessments;
 
     public Long getId() {
         return id;
@@ -105,11 +105,11 @@ public class Student {
         this.lessonReports = lessonReports;
     }
 
-    public List<Asessment> getAssessments() {
+    public List<Assessment> getAssessments() {
         return assessments;
     }
 
-    public void setAssessments(List<Asessment> assessments) {
+    public void setAssessments(List<Assessment> assessments) {
         this.assessments = assessments;
     }
 }
