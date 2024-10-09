@@ -28,9 +28,6 @@ public class Student {
     private List<Parent> parents;
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Invoice> invoices;
-
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<LessonReport> lessonReports;
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -98,14 +95,6 @@ public class Student {
 
     public void setParents(List<Parent> parents) {
         this.parents = parents;
-    }
-
-    public List<Invoice> getInvoices() {
-        return invoices;
-    }
-
-    public void setInvoices(List<Invoice> invoices) {
-        this.invoices = invoices;
     }
 
     public List<LessonReport> getLessonReports() {
